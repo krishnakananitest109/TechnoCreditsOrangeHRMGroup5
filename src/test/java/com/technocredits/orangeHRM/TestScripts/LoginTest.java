@@ -7,6 +7,9 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends CommonTest{
 
+	/*To login 
+	 * calling login() method from CommonTest by passing username and password
+	 */
 	@Test
 	public void doLogin() throws IOException{
 		login("Admin","admin123");
