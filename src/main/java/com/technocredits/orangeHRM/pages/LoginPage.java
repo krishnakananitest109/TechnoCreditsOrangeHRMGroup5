@@ -1,5 +1,6 @@
 package com.technocredits.orangeHRM.pages;
 
+
 import java.util.Properties;
 
 import com.technocredits.orangeHRM.util.PropertyFileReader;
@@ -7,7 +8,7 @@ import com.technocredits.orangeHRM.util.PropertyFileReader;
 public class LoginPage extends com.technocredits.orangeHRM.base.PredefinedMethods {
 
 	private static LoginPage loginPageInstance = null;
-	Properties loginPageProperties = null;
+	Properties loginPageProperties;
 
 	/*
 	 * Constructor that will initialize the LoginPageProperties configuration.
@@ -56,6 +57,7 @@ public class LoginPage extends com.technocredits.orangeHRM.base.PredefinedMethod
 		boolean flag = false;
 		flag = checkURL(expectedURL);
 		return flag;
-	}
+  }
+
 
 }
