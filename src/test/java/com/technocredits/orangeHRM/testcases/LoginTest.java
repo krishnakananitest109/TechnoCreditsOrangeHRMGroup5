@@ -2,6 +2,8 @@ package com.technocredits.orangeHRM.testcases;
 
 import org.testng.annotations.Test;
 
+import junit.framework.Assert;
+
 public class LoginTest extends CommonTest {
 
 	@Test
@@ -12,6 +14,10 @@ public class LoginTest extends CommonTest {
 	 */
 	public void loginTest() {
 		login("Admin", "admin123");
+		String expectedURL="https://opensource-demo.orangehrmlive.com/index.php/dashboard";
+		String actualURL=checkURL();
+		
+		Assert.assertEquals(expectedURL, actualURL);
 
 	}
 

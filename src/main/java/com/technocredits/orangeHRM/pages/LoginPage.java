@@ -53,10 +53,10 @@ public class LoginPage extends com.technocredits.orangeHRM.base.PredefinedMethod
 	 * hardcoded one.
 	 * 
 	 */
-	public boolean checkURLOnLoginPage(String expectedURL) {
-		boolean flag = false;
-		flag = checkURL(expectedURL);
-		return flag;
+	public String checkURLOnLoginPage() {
+		
+		 String URL = getURL();
+		 return URL; 
   }
 
 

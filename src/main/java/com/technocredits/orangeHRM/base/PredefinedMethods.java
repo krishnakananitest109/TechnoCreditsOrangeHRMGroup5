@@ -49,18 +49,10 @@ public class PredefinedMethods {
 	 * checkURL method check if the login is done successfully, based on comparing
 	 * currentURL after login operation.
 	 */
-	public boolean checkURL(String URL) {
-		boolean flagURL = false;
+	public String getURL() {
+		
 		String currentURL = driver.getCurrentUrl();
-		System.out.println("Expected URL-> " + URL);
-		System.out.println("Actual URL-> " + currentURL);
-		if (currentURL.equalsIgnoreCase(URL)) {
-			System.out.println("Both URLs are same");
-			return flagURL = true;
-		} else {
-			System.out.println("Both URLs are not matching");
-			return flagURL;
-		}
-
+		
+		return currentURL;
 	}
 }
