@@ -19,6 +19,9 @@ public class CommonTest {
 
 	}
 	
+	/*
+	 * checkURL method gets the URL of the LoginPage and returns to the LoginTest.
+	 */
 	String  checkURL() {
 		String currentURL=loginpageInstance.checkURLOnLoginPage();
 		return currentURL;

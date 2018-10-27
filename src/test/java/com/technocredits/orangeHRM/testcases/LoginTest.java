@@ -16,8 +16,11 @@ public class LoginTest extends CommonTest {
 		login("Admin", "admin123");
 		String expectedURL="https://opensource-demo.orangehrmlive.com/index.php/dashboard";
 		String actualURL=checkURL();
-		
-		Assert.assertEquals(expectedURL, actualURL);
+		/*
+		 * Following alert checks if the expected and actual url for login page is same; 
+		 * If both urls are different then 
+		 */
+		Assert.assertEquals("Expected Login URL is not matching with the Actual one.",expectedURL, actualURL);
 
 	}
 

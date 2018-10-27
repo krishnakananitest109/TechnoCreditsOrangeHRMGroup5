@@ -46,7 +46,7 @@ public class PredefinedMethods {
 	}
 
 	/*
-	 * checkURL method check if the login is done successfully, based on comparing
+	 * getURL method check if the login is done successfully, based on comparing
 	 * currentURL after login operation.
 	 */
 	public String getURL() {
