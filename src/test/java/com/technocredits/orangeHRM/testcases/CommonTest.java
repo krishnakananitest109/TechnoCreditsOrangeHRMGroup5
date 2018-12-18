@@ -1,6 +1,7 @@
 package com.technocredits.orangeHRM.testcases;
 
 import com.technocredits.orangeHRM.pages.LoginPage;
+import com.technocredits.orangeHRM.pages.pim.PIM_AddEmployeePage;
 
 public class CommonTest {
 
@@ -10,10 +11,9 @@ public class CommonTest {
 	 */
 	void login(String uname, String password) {
 		LoginPage loginpageInstance = LoginPage.getInstance();
-
 		loginpageInstance.enterValueForLoginPage("usernameXpath", uname);
 		System.out.println("Username entered-> " + uname + " successfully!");
-		loginpageInstance.enterValueForLoginPage("passwordXpaht", password);
+		loginpageInstance.enterValueForLoginPage("passwordXpath", password);
 		System.out.println("Password entered-> " + password + " successfully!");
 		loginpageInstance.clickOnLoginPage("loginButton");
 
@@ -27,4 +27,42 @@ public class CommonTest {
 		}
 
 	}
+	
+	
+	public PIM_AddEmployeePage goTo_PIM_AddEmployee(String subtab){
+		PIM_AddEmployeePage pimAddEmployeeInstance = PIM_AddEmployeePage.getInstance();
+		
+		pimAddEmployeeInstance.goto_PIM_AddEmployee("PIMTab",subtab);
+		return pimAddEmployeeInstance;
+	}
+	
+	public void allRequiredFields(PIM_AddEmployeePage pimAddEmployeeInstance){
+		
+		//pimAddEmployeeInstance.fieldIsRequired_validate("SaveButton");
+	}
+	
+	public boolean fieldIsRequired(PIM_AddEmployeePage pimAddEmployeeInstance, String fieldName, String value){
+		
+		if(fieldName=="firstName"){
+			if(pimAddEmployeeInstance.firstNameIsRequired_validate(fieldName)){
+
+				return true;
+			}
+			else{
+				return false;
+			}
+		}else if(fieldName=="lastName"){
+			if(pimAddEmployeeInstance.firstNameIsRequired_validate(fieldName)){
+
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+		return false;
+		
+	}
+	
+	
 }
